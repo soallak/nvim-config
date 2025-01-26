@@ -7,3 +7,15 @@
 # Credits
 
 1) Lazyvim starter https://github.com/LazyVim/starter as nvchad's starter was inspired by Lazyvim's . It made a lot of things easier!
+
+# Install
+
+    git clone git@github.com:soallak/nvim-config.git ~/.config/nvim/ 
+    nvim
+    :MasonInstallAll
+
+# Changelog
+
+- Add instructions to README
+- Add default LSPs
+- Add gitignore file

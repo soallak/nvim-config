@@ -21,4 +21,8 @@ M.base46 = {
 --      }
 --}
 
+M.cheatsheet = {
+  theme = "simple", -- simple/grid
+}
+
 return M
