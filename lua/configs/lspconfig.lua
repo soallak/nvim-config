@@ -3,22 +3,28 @@ require("nvchad.configs.lspconfig").defaults()
 
 local lspconfig = require "lspconfig"
 
--- EXAMPLE
-local servers = { "html", "cssls", "clangd", "cmake", "bashls", "dockerls", "rust_analyzer", "jedi_language_server", "ltex" }
-local nvlsp = require "nvchad.configs.lspconfig"
+-- LSPs wwith default configuration
+local default_servers = {
+  "html",
+  "cssls",
+  "clangd",
+  "cmake",
+  "bashls",
+  "dockerls",
+  "rust_analyzer",
+  "jedi_language_server",
+  "ltex",
+  "texlab",
+  "taplo",
+  "vhdl_ls",
+}
+local default_nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
-for _, lsp in ipairs(servers) do
+for _, lsp in ipairs(default_servers) do
   lspconfig[lsp].setup {
-    on_attach = nvlsp.on_attach,
-    on_init = nvlsp.on_init,
-    capabilities = nvlsp.capabilities,
+    on_attach = default_nvlsp.on_attach,
+    on_init = default_nvlsp.on_init,
+    capabilities = default_nvlsp.capabilities,
   }
 end
-
--- configuring single server, example: typescript
--- lspconfig.ts_ls.setup {
---   on_attach = nvlsp.on_attach,
---   on_init = nvlsp.on_init,
---   capabilities = nvlsp.capabilities,
--- }
