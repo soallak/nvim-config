@@ -14,13 +14,19 @@ return {
     end,
   },
 
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    lazy = false,
+    branch = "main",
+    opts = {
+      ensure_installed = {
+        "lua",
+        "c",
+        "cpp",
+        "rust",
+        "python",
+        "vhdl",
+      },
+    },
+  },
 }
