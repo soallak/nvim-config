@@ -1,10 +1,13 @@
 -- load defaults i.e lua_lsp
-require("nvchad.configs.lspconfig").defaults()
+local M = {}
+
+local nvchad_lsp = require "nvchad.configs.lspconfig"
+nvchad_lsp.defaults()
 
 local lspconfig = require "lspconfig"
 
 -- LSPs wwith default configuration
-local default_servers = {
+M.default_servers = {
   "html",
   "cssls",
   "clangd",
@@ -17,14 +20,17 @@ local default_servers = {
   "texlab",
   "taplo",
   "vhdl_ls",
+  "kotlin_language_server",
+  "gradle_ls",
 }
-local default_nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
-for _, lsp in ipairs(default_servers) do
+for _, lsp in ipairs(M.default_servers) do
   lspconfig[lsp].setup {
-    on_attach = default_nvlsp.on_attach,
-    on_init = default_nvlsp.on_init,
-    capabilities = default_nvlsp.capabilities,
+    on_attach = nvchad_lsp.on_attach,
+    on_init = nvchad_lsp.on_init,
+    capabilities = nvchad_lsp.capabilities,
   }
 end
+
+return M
