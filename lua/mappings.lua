@@ -14,3 +14,9 @@ map("n", "<leader>lr", "<cmd>Telescope lsp_references<CR>", { desc = "telescope 
 map("n", "<leader>li", "<cmd>Telescope lsp_incoming_calls<CR>", { desc = "telescope lsp incoming calls" })
 map("n", "<leader>lo", "<cmd>Telescope lsp_outgoing_calls<CR>", { desc = "telescope lsp outgoing calls" })
 map("n", "<leader>ls", "<cmd>Telescope lsp_workspace_symbols<CR>", { desc = "telescope lsp workspace symbols" })
+
+-- CodeActions
+map("n", "<leader>ca", 
+  function() 
+    vim.lsp.buf.code_action() 
+  end, { desc = "LSP Code Action" })

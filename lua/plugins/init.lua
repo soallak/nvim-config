@@ -23,4 +23,9 @@ return {
       require "configs.treesitter"
     end,
   },
+
+  {
+    "mason-org/mason-lspconfig.nvim",
+    opts = require "configs.mason-lspconfig" ,
+  },
 }
