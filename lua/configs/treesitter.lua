@@ -1,6 +1,4 @@
-local treesitterconfig = require "nvim-treesitter.configs"
-
-treesitterconfig.setup {
+local options = {
 
   -- A list of parser names, or "all" (the listed parsers MUST always be installed)
   ensure_installed = {
@@ -49,3 +47,5 @@ treesitterconfig.setup {
     additional_vim_regex_highlighting = false,
   },
 }
+
+return option

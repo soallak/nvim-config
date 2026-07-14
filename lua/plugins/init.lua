@@ -1,4 +1,6 @@
 return {
+  { "luarocks.nvim", enabled = false },
+
   {
     "stevearc/conform.nvim",
     event = { "BufWritePre" },
@@ -15,17 +17,12 @@ return {
 
   {
     "nvim-treesitter/nvim-treesitter",
-    event = { "BufReadPost", "BufNewFile" },
     lazy = false,
-    branch = "main",
-    build = ":TSUpdate",
-    config = function()
-      require "configs.treesitter"
-    end,
+    opts = require "configs.treesitter",
   },
 
   {
     "mason-org/mason-lspconfig.nvim",
-    opts = require "configs.mason-lspconfig" ,
+    opts = require "configs.mason-lspconfig",
   },
 }
