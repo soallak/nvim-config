@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-  theme = "bearded-arc",
+  theme = "gatekeeper",
 
   -- hl_override = {
   -- 	Comment = { italic = true },
@@ -14,7 +14,7 @@ M.base46 = {
   -- },
 }
 
--- M.nvdash = { load_on_startup = true }
+M.nvdash = { load_on_startup = true }
 
 M.ui = {
   tabufline = {
@@ -24,16 +24,16 @@ M.ui = {
   cmp = {
     icons = true,
     lspkind_text = true,
-    style = "flat_light", -- default/flat_light/flat_dark/atom/atom_colored
+    style = "default", -- default/flat_light/flat_dark/atom/atom_colored
   },
 
   telescope = { style = "bordered" }, -- borderless / bordered
 
   statusline = {
-    theme = "default", -- default/vscode/vscode_colored/minimal
+    theme = "minimal", -- default/vscode/vscode_colored/minimal
     -- default/round/block/arrow separators work only for default statusline theme
     -- round and block will work for minimal theme only
-    separator_style = "arrow",
+    separator_style = "round",
     order = nil,
     modules = nil,
   },

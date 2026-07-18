@@ -1,9 +1,8 @@
--- load defaults 
+-- load defaults
 require("nvchad.configs.lspconfig").defaults()
 
 local M = {}
 
--- LSPs wwith default configuration
 M.default_servers = {
   "html",
   "cssls",
